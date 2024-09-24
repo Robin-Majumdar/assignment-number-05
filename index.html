@@ -34,7 +34,7 @@
                         <span>
                             <img src="./assets/coin.png" alt="Coin Icon">
                         </span>
-                        <span
+                        <span id="total-donation-amount"
                             class="text-xl font-medium bg-gradient-to-r from-[#111111] to-[#777777] bg-clip-text text-transparent">
                             5500 BDT
                         </span>
@@ -81,22 +81,86 @@
                 <input id="donation-add-money" class="w-full p-3 border rounded-md mb-4" type="text"
                     placeholder="Write Donation Amount">
 
-                <button id="btn-donate-now"
+                <button id="btn-donate-one"
                     class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-6 rounded-md w-full">Donate
                     Now</button>
             </div>
         </section>
 
+        <!-- Donate for Flood Relief in Feni,Bangladesh -->
+        <section
+            class="container mx-auto lg:flex items-center justify-between lg:space-x-4 border rounded-2xl mt-8 p-6 bg-[#FFFFFF]">
+            <div class="md:w-full md:flex md:justify-center lg:w-1/2 ">
+                <img src="./assets/feni.png" alt="">
+            </div>
+            <div class="lg:w-1/2 mt-4 lg:mt-0 space-y-6">
+                <div class="w-[200px] flex items-center border rounded-md space-x-4 bg-[rgba(17,17,17,0.05)] p-2">
+                    <span>
+                        <img src="./assets/coin.png" alt="Coin Icon">
+                    </span>
+                    <span id="donation-visible-money-two"
+                        class="text-xl font-medium bg-gradient-to-r from-[#111111] to-[#777777] bg-clip-text text-transparent">
+                        600 BDT
+                    </span>
+                </div>
+                <h1 class="text-xl font-bold text-[#111111]">Donate for Flood Relief in Feni,Bangladesh</h1>
+                <p class="text-[#3E2626] font-light text-justify">
+                    The recent floods in Feni have devastated local communities, leading to severe disruption and loss.
+                    Your generous donation will help provide immediate aid, including food, clean water, and medical
+                    supplies, to those affected by this calamity. Together, we can offer crucial support and help
+                    rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real
+                    difference. Please consider donating today to assist those in urgent need.
+                </p>
+                <input id="donation-add-money-two" class="w-full p-3 border rounded-md mb-4" type="text"
+                    placeholder="Write Donation Amount">
+
+                <button id="btn-donate-two"
+                    class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-6 rounded-md w-full">Donate
+                    Now</button>
+            </div>
+        </section>
+
+        <!-- Aid for Injured in the Quota Movement -->
+        <section
+            class="container mx-auto lg:flex items-center justify-between lg:space-x-4 border rounded-2xl mt-8 p-6 bg-[#FFFFFF]">
+            <div class="md:w-full md:flex md:justify-center lg:w-1/2 ">
+                <img src="./assets/quota-protest.png" alt="">
+            </div>
+            <div class="lg:w-1/2 mt-4 lg:mt-0 space-y-6">
+                <div class="w-[200px] flex items-center border rounded-md space-x-4 bg-[rgba(17,17,17,0.05)] p-2">
+                    <span>
+                        <img src="./assets/coin.png" alt="Coin Icon">
+                    </span>
+                    <span id="donation-visible-money-three"
+                        class="text-xl font-medium bg-gradient-to-r from-[#111111] to-[#777777] bg-clip-text text-transparent">
+                        2400 BDT
+                    </span>
+                </div>
+                <h1 class="text-xl font-bold text-[#111111]">Aid for Injured in the Quota Movement</h1>
+                <p class="text-[#3E2626] font-light text-justify">
+                    The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                </p>
+                <input id="donation-add-money-three" class="w-full p-3 border rounded-md mb-4" type="text"
+                    placeholder="Write Donation Amount">
+
+                <button id="btn-donate-three"
+                    class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-6 rounded-md w-full">Donate
+                    Now</button>
+            </div>
+        </section>
+
+        <!-- Donation Modal -->
         <section>
             <!-- Modal -->
-            <div id="donationModal" 
-            class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50">
+            <div id="donationModal"
+                class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50">
                 <div style="width: 80%; max-width: 500px;" class=" bg-white rounded-lg p-6 shadow-lg text-center">
                     <h2 class="text-3xl font-bold mb-4">Congrats!</h2>
-                    <img src="/assets/coin.png" alt="Coin Icon" class="mx-auto mb-4">
+                    <img src="./assets/coin.png" alt="Coin Icon" class="mx-auto mb-4">
                     <p class="text-lg">You Have Donated for Humankind</p>
                     <p class="font-bold text-xl">Successfully</p>
-                    <button onclick="closeModal()" class="mt-6 bg-gray-200 text-black px-4 py-2 rounded-md">Close Confirmation</button>
+                    <button onclick="closeModal()" class="mt-6 bg-gray-200 text-black px-4 py-2 rounded-md">Close
+                        Confirmation</button>
                 </div>
             </div>
         </section>
