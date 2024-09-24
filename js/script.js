@@ -23,10 +23,9 @@ document.getElementById('btn-donate-now')
             document.getElementById('donation-visible-money').innerText = newBalance;
             document.getElementById('donation-visible-money').innerText = `${newBalance} BDT`;
             document.getElementById('donation-add-money').value = '';
+            openModal();
 
         }
-
-
     });
 
 

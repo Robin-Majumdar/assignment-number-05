@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -85,6 +86,21 @@
                     Now</button>
             </div>
         </section>
+
+        <section>
+            <!-- Modal -->
+            <div id="donationModal" 
+            class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50">
+                <div style="width: 80%; max-width: 500px;" class=" bg-white rounded-lg p-6 shadow-lg text-center">
+                    <h2 class="text-3xl font-bold mb-4">Congrats!</h2>
+                    <img src="/assets/coin.png" alt="Coin Icon" class="mx-auto mb-4">
+                    <p class="text-lg">You Have Donated for Humankind</p>
+                    <p class="font-bold text-xl">Successfully</p>
+                    <button onclick="closeModal()" class="mt-6 bg-gray-200 text-black px-4 py-2 rounded-md">Close Confirmation</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="p-12 mt-6 bg-[#F9F7F3]">
