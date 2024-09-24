@@ -95,7 +95,7 @@ document.getElementById('btn-donate-three')
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
 
             const div = document.createElement('div');
-            div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.classList.add('text-lg','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate Aid for Injured in the Quota Movement New Balance: ${totalNewBalance} BDT</p>
             `;
