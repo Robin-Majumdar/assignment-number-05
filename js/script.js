@@ -4,7 +4,7 @@ document.getElementById('blog-button')
         window.open('important-faq.html', '_blank');
     });
 
-    
+
 // Donation button number One
 document.getElementById('btn-donate-one')
     .addEventListener('click', function (event) {
@@ -14,7 +14,7 @@ document.getElementById('btn-donate-one')
         const presentBalance = getTextFieldValueById('donation-visible-money');
         const totalAmount = getTextFieldValueById('total-donation-amount');
 
-        if(isNaN(donationAddMoney) || donationAddMoney <=0) {
+        if (isNaN(donationAddMoney) || donationAddMoney <= 0) {
             alert("Please enter a valid number!")
         }
         else {
@@ -27,12 +27,19 @@ document.getElementById('btn-donate-one')
             const totalNewBalance = donationAddMoney + totalAmount;
             document.getElementById('total-donation-amount').innerText = totalNewBalance;
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
+            
+            const div = document.createElement('div');
+            div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.innerHTML = `
+                <p>${donationAddMoney} BDT. Donate for Flood at Noakhali, Bangladesh New Balance: ${totalNewBalance} BDT</p>
+            `;
+            document.getElementById('transaction-container').appendChild(div);
 
-        }
+        };
     });
 
 // Donation button number Two
-    document.getElementById('btn-donate-two')
+document.getElementById('btn-donate-two')
     .addEventListener('click', function (event) {
         event.preventDefault();
 
@@ -40,7 +47,7 @@ document.getElementById('btn-donate-one')
         const presentBalance = getTextFieldValueById('donation-visible-money-two');
         const totalAmount = getTextFieldValueById('total-donation-amount');
 
-        if(isNaN(donationAddMoney) || donationAddMoney <=0) {
+        if (isNaN(donationAddMoney) || donationAddMoney <= 0) {
             alert("Please enter a valid number!")
         }
         else {
@@ -54,11 +61,18 @@ document.getElementById('btn-donate-one')
             document.getElementById('total-donation-amount').innerText = totalNewBalance;
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
 
+            const div = document.createElement('div');
+            div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.innerHTML = `
+                <p>${donationAddMoney} BDT. Donate for Flood Relief in Feni, Bangladesh New Balance: ${totalNewBalance} BDT</p>
+            `;
+            document.getElementById('transaction-container').appendChild(div);
+
         }
     });
 
 // Donation Button number Three
-    document.getElementById('btn-donate-three')
+document.getElementById('btn-donate-three')
     .addEventListener('click', function (event) {
         event.preventDefault();
 
@@ -66,7 +80,7 @@ document.getElementById('btn-donate-one')
         const presentBalance = getTextFieldValueById('donation-visible-money-three');
         const totalAmount = getTextFieldValueById('total-donation-amount');
 
-        if(isNaN(donationAddMoney) || donationAddMoney <=0) {
+        if (isNaN(donationAddMoney) || donationAddMoney <= 0) {
             alert("Please enter a valid number!")
         }
         else {
@@ -80,9 +94,37 @@ document.getElementById('btn-donate-one')
             document.getElementById('total-donation-amount').innerText = totalNewBalance;
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
 
+            const div = document.createElement('div');
+            div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.innerHTML = `
+                <p>${donationAddMoney} BDT. Donate Aid for Injured in the Quota Movement New Balance: ${totalNewBalance} BDT</p>
+            `;
+            document.getElementById('transaction-container').appendChild(div);
+
         }
     });
 
+// Page switched function called here
+
+document.getElementById('donation-history')
+    .addEventListener('click', function () {
+        showSectionById('donation-section');
+
+        this.style.backgroundColor = '#B4F461';
+        this.style.color = 'black';
+        document.getElementById('transaction-history').style.backgroundColor = 'white';
+        document.getElementById('transaction-history').style.color = 'black';
+    });
+
+    document.getElementById('transaction-history')
+    .addEventListener('click', function(){
+        showSectionById('transaction-section');
+
+        this.style.backgroundColor = '#B4F461';
+        this.style.color = 'black';
+        document.getElementById('donation-history').style.backgroundColor = 'white';
+        document.getElementById('donation-history').style.color = 'black';
+    });
 
 
 
