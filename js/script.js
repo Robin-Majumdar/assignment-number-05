@@ -1,3 +1,5 @@
+
+
 // Click on the button open a new window or new tab what aver
 document.getElementById('blog-button')
     .addEventListener('click', function () {

@@ -1,3 +1,5 @@
+
+
 // Common function by input filed
 function getInputFieldValueById(id) {
     const inputValue = document.getElementById(id).value;
