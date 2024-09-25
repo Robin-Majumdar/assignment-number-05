@@ -35,3 +35,10 @@ function showSectionById(id){
 
     document.getElementById(id).classList.remove('hidden');
 };
+
+// Show donation time
+
+function getCurrentTime() {
+    const currentTime = new Date();
+    return `Date : ${currentTime.toString()}`;
+}

@@ -34,6 +34,7 @@ document.getElementById('btn-donate-one')
             div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate for Flood at Noakhali, Bangladesh New Balance: ${totalNewBalance} BDT</p>
+                <p>${getCurrentTime()}</p>
             `;
             document.getElementById('transaction-container').appendChild(div);
 
@@ -67,6 +68,7 @@ document.getElementById('btn-donate-two')
             div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate for Flood Relief in Feni, Bangladesh New Balance: ${totalNewBalance} BDT</p>
+                <p>${getCurrentTime()}</p>
             `;
             document.getElementById('transaction-container').appendChild(div);
 
@@ -100,6 +102,7 @@ document.getElementById('btn-donate-three')
             div.classList.add('text-lg','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate Aid for Injured in the Quota Movement New Balance: ${totalNewBalance} BDT</p>
+                <p>${getCurrentTime()}</p>
             `;
             document.getElementById('transaction-container').appendChild(div);
 
