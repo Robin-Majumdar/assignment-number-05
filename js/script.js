@@ -3,8 +3,14 @@
 // Click on the button open a new window or new tab what aver
 document.getElementById('blog-button')
     .addEventListener('click', function () {
-        window.open('important-faq.html', '_blank');
+        // window.open('important-faq.html', '_blank');
+        window.location.href = '/important-faq.html'
     });
+// document.getElementById('home-button')
+//     .addEventListener('click', function () {
+//         // window.open('important-faq.html', '_blank');
+//         window.location.href = 'index.html'
+//     });
 
 
 // Donation button number One
@@ -26,12 +32,12 @@ document.getElementById('btn-donate-one')
             document.getElementById('donation-add-money').value = '';
             openModal();
 
-            const totalNewBalance = donationAddMoney + totalAmount;
+            const totalNewBalance = totalAmount - donationAddMoney;
             document.getElementById('total-donation-amount').innerText = totalNewBalance;
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
-            
+
             const div = document.createElement('div');
-            div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.classList.add('text-xl', 'text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate for Flood at Noakhali, Bangladesh New Balance: ${totalNewBalance} BDT</p>
                 <p>${getCurrentTime()}</p>
@@ -60,12 +66,13 @@ document.getElementById('btn-donate-two')
             document.getElementById('donation-add-money-two').value = '';
             openModal();
 
-            const totalNewBalance = donationAddMoney + totalAmount;
+            // const totalNewBalance = donationAddMoney + totalAmount;
+            const totalNewBalance = totalAmount - donationAddMoney;
             document.getElementById('total-donation-amount').innerText = totalNewBalance;
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
 
             const div = document.createElement('div');
-            div.classList.add('text-xl','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.classList.add('text-xl', 'text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate for Flood Relief in Feni, Bangladesh New Balance: ${totalNewBalance} BDT</p>
                 <p>${getCurrentTime()}</p>
@@ -94,12 +101,12 @@ document.getElementById('btn-donate-three')
             document.getElementById('donation-add-money-three').value = '';
             openModal();
 
-            const totalNewBalance = donationAddMoney + totalAmount;
+            const totalNewBalance = totalAmount - donationAddMoney;
             document.getElementById('total-donation-amount').innerText = totalNewBalance;
             document.getElementById('total-donation-amount').innerText = `${totalNewBalance} BDT`;
 
             const div = document.createElement('div');
-            div.classList.add('text-lg','text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
+            div.classList.add('text-lg', 'text-center', 'mt-6', 'p-4', 'border-2', 'rounded-md', 'bg-slate-100');
             div.innerHTML = `
                 <p>${donationAddMoney} BDT. Donate Aid for Injured in the Quota Movement New Balance: ${totalNewBalance} BDT</p>
                 <p>${getCurrentTime()}</p>
@@ -121,8 +128,8 @@ document.getElementById('donation-history')
         document.getElementById('transaction-history').style.color = 'black';
     });
 
-    document.getElementById('transaction-history')
-    .addEventListener('click', function(){
+document.getElementById('transaction-history')
+    .addEventListener('click', function () {
         showSectionById('transaction-section');
 
         this.style.backgroundColor = '#B4F461';
